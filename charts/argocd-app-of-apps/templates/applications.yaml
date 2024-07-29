@@ -49,6 +49,11 @@ spec:
       values: |
         {{ .values | nindent 8 }}
 {{- end }}
+{{- if .parameters }}
+      parameters:
+  { { - with .parameters } }
+  { { - toYaml . | nindent 4 } }
+  { { - end } }
 {{- end }}
   syncPolicy:
 {{- with .automated }}

@@ -18,6 +18,9 @@ applications:
   #   values: |
   #     fullnameOverride: prometheus
   #   valueFiles: []
+  #   parameters: {
+  #     identityTrustAnchorsPEM: ca.crt
+  #   }
   #   syncOptions:
   #     - ApplyOutOfSyncOnly=true
   #     - CreateNamespace=true
